@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(copy \"c:\\\\Users\\\\chebr\\\\Downloads\\\\Hero Section.json\" \"C:\\\\Users\\\\chebr\\\\Downloads\\\\New folder\\\\Hero Section.json\")",
+      "Bash(powershell -Command:*)"
+    ]
+  }
+}

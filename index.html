@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge-to-Edge Aspect Ratio Fill</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: #0A0A12;
+            min-height: 100vh; 
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 120px;
+            padding-left: 35px;
+            padding-right: 35px;
+            overflow: visible;
+             /* NO horizontal padding */
+        }
+
+        #lottie-container {
+            width: 100%; 
+            height: 100vh; /* Use full screen height */
+            overflow: visible; 
+            max-width: none; 
+        }
+
+        #lottie-animation {
+            width: 100%;
+            height:130%;
+        }
+    </style>
+</head>
+<body>
+    <div id="lottie-container">
+        <div id="lottie-animation"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script>
+        const animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'canvas', 
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/bdb15de5-5ac9-4c72-bcd9-602c21963bea/X7ed0CETN5.json',
+            rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice' // Maintains aspect ratio, creating top/bottom gaps
+            }
+        });
+    </script>
+</body>
+</html>
+
+
